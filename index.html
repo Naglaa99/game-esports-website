@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth font-poppins">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description"
+    content="Experience thrilling esports action, live tournaments, and gaming news all in one immersive platform" />
+  <title>GameX - Gaming website</title>
+
+  <!-- Fav Icon -->
+  <link rel="icon" href="./assets/favicon.svg" type="image/svg+xml" />
+
+  <!-- Google Fonts Link -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600;700&family=Poppins:wght@400;500;700&display=swap"
+    rel="stylesheet" />
+  <!-- icons  -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+
+
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=link" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <!-- External css link -->
+  <link href="./dist/output.css" rel="stylesheet" />
+</head>
+
+<body class="scrollbar-thin overflow-y-auto" id="top">
+
+  <!-- === Header === -->
+  <header
+    class="header fixed left-0 top-0 bg-raisin-black-1 p-[12px] w-full shadow-header z-40 border-b-[1px] border-solid border-custom">
+    <div class="overlay fixed inset-0 pointer-events-none z-10 transition duration-[.15s] ease-in"></div>
+    <div class="container flex justify-between items-center ">
+      <a href="#" class="logo ">
+        <img src="./assets/images/logo.svg" alt="GameX logo">
+      </a>
+      <button class="open-menu text-white text-[40px] p-1"><i class='bx bx-menu'></i></button>
+      <nav class="hidden fixed top-0 right-0 bg-raisin-black-2 w-full max-w-[300px] h-full shadow-navbar z-20">
+        <div class="navbar-top flex justify-between items-center p-[20px]">
+          <a href="#" class="logo">
+            <img src="./assets/images/logo.svg" alt="GameX logo">
+          </a>
+          <button class=" close-menu text-orange text-[30px] p-[10px] translate-x-[15px] font-bold">
+            <i class='bx bx-x'></i>
+          </button>
+        </div>
+
+        <ul class="navbar-list border-t-[1px] border-solid border-custom mb-[30px]">
+          <li class="nav-link "><a href="#hero">home</a></li>
+          <li class="nav-link"><a href="#about">about</a></li>
+          <li class="nav-link"><a href="#tournament">tournament</a></li>
+          <li class="nav-link"><a href="#team">team</a></li>
+          <li class="nav-link"><a href="#gears">gears</a></li>
+          <li class="nav-link"><a href="#contact">contact</a></li>
+        </ul>
+        <ul class="nav-social-list flex justify-center gap-4  items-center">
+          <li><a href="#"><i class='bx bxl-twitter'></i></a></i></li>
+          <li><a href="#"><i class='bx bxl-instagram'></i></a></i></li>
+          <li><a href="#"><i class='bx bxl-github'></i></a></li>
+          <li><a href="#"><i class='bx bxl-youtube'></i></a></li>
+        </ul>
+
+        <div class="navbar-actions hidden">
+          <button><i class='bx bx-search'></i></button>
+          <button>
+            <i class='hidden  bx bx-log-in'></i>
+            <span>log-in</span>
+          </button>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <article>
+      <!-- === Hero section === -->
+      <section
+        class="hero flex justify-center items-center py-[60px]  bg-no-repeat bg-cover bg-center  text-center min-h-screen max-h-[1000px] mt-[90px] bg-[url('../assets/images/hero-banner.jpg')]"
+        id="hero">
+        <div class="container">
+          <p class="subtitle text-fs-7 font-oswald font-medium  uppercase tracking-[12px] text-shadow-text text-white">
+            the season 8</p>
+          <h1 class="title">steam</h1>
+          <div class="button-group flex flex-wrap justify-center items-center ">
+            <button class="button primary-button gap-2 flex justify-center items-center">
+              <span>watch live</span>
+              <i class='bx bxs-caret-right-circle text-[24px]'></i>
+            </button>
+            <button class="button  hover:text-orange  ">
+              dream making
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <div class="section-wrapper  bg-[url('../assets/images/section-wrapper-bg.jpg')]  bg-cover bg-center ">
+        <section
+          class="about bg-[url('../assets/images/about-img-shadow.png')]  bg-cover bg-center  pt-[120px] pb-[60px]"
+          id="about">
+          <div class="container">
+            <figure class="about-banner mb-[40px]">
+              <img src="./assets/images/about-img.png" alt="M shape" class="w-full">
+              <img src="./assets/images/character-1.png" alt="Game character" class="hidden">
+              <img src="./assets/images/character-2.png" alt="Game character" class="hidden">
+              <img src="./assets/images/character-3.png" alt="Game character" class="hidden">
+            </figure>
+            <div class="about-content bg-raisin-black-1 px-[20px] py-[40px] text-white rounded-[4px] shadow-card">
+              <p class="text-orange font-oswald  uppercase mb-[15px] text-fs-8 font-medium">Find team member</p>
+              <h2 class="mb-[20px] font-semibold">Experience just for gamers <strong class="text-orange">offer</strong>
+              </h2>
+              <p class="text-light-gray mb-[20px] leading-[1.8] text-fs-9 tracking-[0.5px]">Nullam quis ante. Maecenas
+                ullamcorper, dui et placerat feugiat, eros pede varius nisi, condimentum viverra felis nunc et lorem. In
+                auctor lobortis lacus. Phasellus gravida semper nisi. Aliquam lobortis.</p>
+              <p class="flex items-center gap-[8px] ">
+                <i class='bx bx-right-arrow-circle text-orange text-[26px]'></i>
+                <span class="text-light-gray  leading-[1.8] text-fs-9 tracking-[0.5px]">Will sharpen your brain and
+                  focus</span>
+              </p>
+            </div>
+
+          </div>
+        </section>
+
+        <section class="tournament py-[60px] text-center" id="tournament">
+          <div class="container">
+
+            <div class="tournament-content mb-[50px]">
+              <p class="font-oswald font-medium mb-[10px] uppercase text-orange">Check out our next</p>
+              <h2 class="font-semibold mb-[20px]">Gaming tournaments !</h2>
+              <p class="text-fs-9 text-light-gray mb-[30px] leading-[1.8]">Lpsum dolor sit amet, consectetur adipiscing
+                elit, sed labore et dolore magna aliqua.</p>
+              <button class="button primary-button mx-auto ">join with us</button>
+            </div>
+
+            <div class="tournament-prize">
+              <h2 class="font-semibold mb-[20px] text-fs-3">Prize pool</h2>
+              <data value="80000"
+                class="font-oswald text-fs-4 py-[8px] px-[42px] bg-orange rounded-[50px] ">$80000</data>
+              <figure>
+                <img src="./assets/images/prize-img.png" class="mx-auto mb-[40px]" alt="prize image">
+              </figure>
+            </div>
+
+            <div class="tournament-winners bg-raisin-black-1 rounded-[4px] px-[30px] py-[40px]  shadow-card">
+              <h2 class="font-semibold text-fs-3 mb-[25px]">Last winners</h2>
+              <ul class="flex flex-wrap  justify-center items-center gap-[20px]">
+                <li class="max-w-[90px]  mb-[15px]">
+                  <figure>
+                    <img src="./assets/images/winner-img-1.png" class="w-full mb-[15px]" alt="first winner image">
+                  </figure>
+                  <h3 class="px-[10px] py-[6px] bg-orange text-fs-9 uppercase rounded-[4px] font-semibold ">1st place
+                  </h3>
+                </li>
+                <li class="max-w-[90px]  mb-[15px]">
+                  <figure>
+                    <img src="./assets/images/winner-img-2.png" class="w-full mb-[15px]" alt="second winner image">
+                  </figure>
+                  <h3 class="px-[10px] py-[6px] bg-orange text-fs-9 uppercase rounded-[4px] font-semibold ">2nd place
+                  </h3>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        <section class="py-[60px]">
+          <div class="container">
+            <ul
+              class=" gallery-list has-scrollbar scrollbar-thin flex justify-start items-center gap-[15px] m-[-15px] pb-[15px] px-[15px] overflow-x-auto  snap-x snap-mandatory ">
+              <li>
+                <img src="./assets/images/gallery-img-1.jpg" class="w-full rounded-[4px] shadow-card"
+                  alt="Gallery image">
+              </li>
+              <li>
+                <img src="./assets/images/gallery-img-2.jpg" class="w-full rounded-[4px] shadow-card"
+                  alt="Gallery image">
+              </li>
+              <li>
+                <img src="./assets/images/gallery-img-3.jpg" class="w-full rounded-[4px] shadow-card"
+                  alt="Gallery image">
+              </li>
+              <li>
+                <img src="./assets/images/gallery-img-4.jpg" class="w-full rounded-[4px] shadow-card"
+                  alt="Gallery image">
+              </li>
+            </ul>
+          </div>
+        </section>
+
+        <section class="team py-[60px]" id="team">
+          <div class="container">
+            <h2 class="font-semibold text-center  mb-[80px] section-title">Active Team Members</h2>
+            <ul class=" team-member-list flex flex-wrap justify-center items-center gap-[30px] mb-[70px]">
+              <li>
+                <a href="#">
+
+                  <img src="./assets/images/team-member-1.png" alt="Team member image">
+
+                  <span class="material-symbols-outlined">link</span>
+                </a>
+
+              </li>
+              <li>
+                <a href="#"><img src="./assets/images/team-member-2.png" alt="Team member image">
+                  <span class="material-symbols-outlined">link</span>
+                </a>
+
+              </li>
+
+              <li>
+                <a href="#"><img src="./assets/images/team-member-3.png" alt="Team member image">
+                  <span class="material-symbols-outlined">link</span></a>
+              </li>
+
+
+
+              <li>
+                <a href="#"><img src="./assets/images/team-member-6.png" alt="Team member image">
+                  <span class="material-symbols-outlined">link</span>
+                </a>
+              </li>
+              <li>
+                <a href="#"><img src="./assets/images/team-member-7.png" alt="Team member image">
+                  <span class="material-symbols-outlined">link</span></a>
+
+              </li>
+              <li>
+                <a href="#"><img src="./assets/images/team-member-8.png" alt="Team member image">
+                  <span class="material-symbols-outlined">link</span>
+                </a>
+              </li>
+
+              <li>
+                <a href="#"><img src="./assets/images/team-member-9.png" alt="Team member image">
+                  <span class="material-symbols-outlined">link</span>
+                </a>
+              </li>
+
+              <li>
+                <a href="#"><img src="./assets/images/team-member-11.png" alt="Team member image">
+                  <span class="material-symbols-outlined">link</span>
+                </a>
+              </li>
+
+              <li>
+                <a href="#"><img src="./assets/images/team-member-12.png" alt="Team member image">
+                  <span class="material-symbols-outlined">link</span>
+                </a>
+              </li>
+
+              <li>
+                <a href="#"><img src="./assets/images/team-member-13.png" alt="Team member image">
+                  <span class="material-symbols-outlined">link</span>
+                </a>
+              </li>
+
+              <li>
+                <a href="#"><img src="./assets/images/team-member-14.png" alt="Team member image">
+                  <span class="material-symbols-outlined">link</span>
+                </a>
+              </li>
+
+            </ul>
+            <div class="flex justify-center items-center">
+              <button class="button primary-button">view all members</button>
+            </div>
+
+          </div>
+        </section>
+
+        <section class="gears py-[60px]" id="gears">
+          <div class="container">
+            <h2 class="font-semibold text-center  section-title mb-[80px]">check our gears</h2>
+            <ul class="gear-list grid gap-[50px]">
+              <li>
+                <div class="gears-card">
+                  <div
+                    class="card-banner relative bg-[url('../assets/images/gears-card-bg.png')] bg-contain bg-center w-full bg-no-repeat aspect-2/1.7 grid place-items-center mb-[30px] ">
+                    <a href="#" class="w-full"><img src="./assets/images/gears-img-1.png" class="w-[45%] mx-auto"
+                        alt="Headphone"></a>
+                    <button
+                      class="share text-orange absolute top-[25%] right-[8%] text-[20px] border-onyx border-[2px] border-solid w-[45px] h-[45px] rounded-[50%] grid place-items-center transition ease-in-out duration-[0.15s] hover:border-orange">
+                      <i class='bx bxs-share-alt'></i>
+                    </button>
+                    <div
+                      class="card-time-wrapper   text-orange absolute top-[2%] right-[5%] font-oswald text-fs-9 font-medium uppercase flex justify-center items-center gap-[5px]">
+                      <i class='bx bx-time text-[16px]'></i>
+                      <span>In 4 days</span>
+                    </div>
+                  </div>
+                  <div class="card-content  text-white flex justify-between items-center uppercase mb-[25px]">
+                    <div class="card-title-wrapper">
+                      <h3 class="font-oswald font-medium e text-fs-5 ">Headphone</h3>
+                      <p class="mt-[5px] text-light-gray text-fs-8">e-sports</p>
+                    </div>
+                    <div class="card-price font-oswald font-medium text-fs-5 ">
+                      $18
+                    </div>
+                  </div>
+                  <div class="card-actions flex justify-between items-center gap-[10px]">
+                    <button class="card-button button primary-button  "><i
+                        class='bx bx-plus text-fs-6 font-semibold'></i> add to cart</button>
+                    <button class="card-button  button   bg-raisin-black-1 clip-polygon-5 hover:bg-orange  group"><i
+                        class='bx bx-heart text-[20px] text-orange group-hover:text-white'></i></button>
+                  </div>
+                </div>
+              </li>
+
+              <li>
+                <div class="gears-card">
+                  <div
+                    class="card-banner relative bg-[url('../assets/images/gears-card-bg.png')] bg-contain bg-center w-full bg-no-repeat aspect-2/1.7 grid place-items-center mb-[30px] ">
+                    <a href="#" class="w-full"><img src="./assets/images/gears-img-2.png" class="w-[45%] mx-auto"
+                        alt="Controller"></a>
+                    <button
+                      class="share text-orange absolute top-[25%] right-[8%] text-[20px] border-onyx border-[2px] border-solid w-[45px] h-[45px] rounded-[50%] grid place-items-center transition ease-in-out duration-[0.15s] hover:border-orange">
+                      <i class='bx bxs-share-alt'></i>
+                    </button>
+                    <div
+                      class="card-time-wrapper   text-orange absolute top-[2%] right-[5%] font-oswald text-fs-9 font-medium uppercase flex justify-center items-center gap-[5px]">
+                      <i class='bx bx-time text-[16px]'></i>
+                      <span>In 4 days</span>
+                    </div>
+                  </div>
+                  <div class="card-content  text-white flex justify-between items-center uppercase mb-[25px]">
+                    <div class="card-title-wrapper">
+                      <h3 class="font-oswald font-medium e text-fs-5 ">controller</h3>
+                      <p class="mt-[5px] text-light-gray text-fs-8">e-sports</p>
+                    </div>
+                    <div class="card-price font-oswald font-medium text-fs-5 ">
+                      $29
+                    </div>
+                  </div>
+                  <div class="card-actions flex justify-between items-center gap-[10px]">
+                    <button class="card-button button primary-button  "><i
+                        class='bx bx-plus text-fs-6 font-semibold'></i> add to cart</button>
+                    <button class="card-button  button   bg-raisin-black-1 clip-polygon-5 hover:bg-orange group "><i
+                        class='bx bx-heart text-[20px] text-orange group-hover:text-white '></i></button>
+                  </div>
+                </div>
+              </li>
+
+
+              <li>
+                <div class="gears-card">
+                  <div
+                    class="card-banner relative bg-[url('../assets/images/gears-card-bg.png')] bg-contain bg-center w-full bg-no-repeat aspect-2/1.7 grid place-items-center mb-[30px] ">
+                    <a href="#" class="w-full"><img src="./assets/images/gears-img-3.png" class="w-[45%] mx-auto"
+                        alt="Gaming Mask"></a>
+                    <button
+                      class="share text-orange absolute top-[25%] right-[8%] text-[20px] border-onyx border-[2px] border-solid w-[45px] h-[45px] rounded-[50%] grid place-items-center transition ease-in-out duration-[0.15s] hover:border-orange">
+                      <i class='bx bxs-share-alt'></i>
+                    </button>
+                    <div
+                      class="card-time-wrapper   text-orange absolute top-[2%] right-[5%] font-oswald text-fs-9 font-medium uppercase flex justify-center items-center gap-[5px]">
+                      <i class='bx bx-time text-[16px]'></i>
+                      <span>In 4 days</span>
+                    </div>
+                  </div>
+                  <div class="card-content  text-white flex justify-between items-center uppercase mb-[25px]">
+                    <div class="card-title-wrapper">
+                      <h3 class="font-oswald font-medium e text-fs-5 ">gaming mask</h3>
+                      <p class="mt-[5px] text-light-gray text-fs-8">e-sports</p>
+                    </div>
+                    <div class="card-price font-oswald font-medium text-fs-5 ">
+                      $45
+                    </div>
+                  </div>
+                  <div class="card-actions flex justify-between items-center gap-[10px]">
+                    <button class="card-button button primary-button  "><i
+                        class='bx bx-plus text-fs-6 font-semibold'></i> add to cart</button>
+                    <button class="card-button  button   bg-raisin-black-1 clip-polygon-5 hover:bg-orange group "><i
+                        class='bx bx-heart text-[20px] text-orange group-hover:text-white '></i></button>
+                  </div>
+                </div>
+              </li>
+
+            </ul>
+          </div>
+        </section>
+
+        <section class="newsletter pt-[60px] pb-[120px]">
+          <div class="container">
+            <div
+              class="newsletter-card bg-[url('../assets/images/newsletter-bg.jpg')] bg-cover bg-center bg-no-repeat shadow-card rounded-[10px] py-[50px] px-[25px] text-center ">
+              <div class="newsletter-content pb-[30px] ">
+                <img src="./assets/images/newsletter-img.png" alt="Newsletter Image" class="w-max mx-auto mb-[10px]">
+                <h2 class="font-semibold text-fs-3">Subscribe to our newsletter</h2>
+              </div>
+              <form action="">
+                <input type="email"
+                  class="py-[17px] px-[25px] w-full bg-[hsla(0,0%,0%,.2)] mb-[15px] border-[1px] border-white border-solid text-fs-10 text-white focus:bg-[hsla(0,0%,0%,.4)] focus:outline-none placeholder:text-white placeholder:text-fs-9 placeholder:capitalize "
+                  name="email" placeholder="your email address" required>
+                <button type="submit" class="button  bg-white  hover:bg-raisin-black-1 group text-fs-7"><span
+                    class="text-orange group-hover:text-white">subscribe</span></button>
+              </form>
+            </div>
+          </div>
+        </section>
+
+
+      </div>
+    </article>
+  </main>
+  <footer>
+    <div class="footer-top bg-[url('../assets/images/footer-bg.jpg')] bg-no-repeat bg-cover bg-center py-[60px]">
+      <div class="container">
+        <div
+          class="footer-brand-wrapper relative pb-[30px] border-b-[1px] border-solid border-b-[hsl(220,14%,8%)] mb-[50px]">
+          <div class="flex justify-center mb-[50px]">
+            <a href="#" class="logo w-max">
+              <img src="./assets/images/logo.svg" alt="GameX logo">
+            </a>
+          </div>
+          <div class="footer-menu-wrapper">
+            <ul
+              class="footer-menu-list flex flex-wrap justify-center items-center mb-[20px] gap-y-[5px] gap-x-[40px] text-fs-8 uppercase font-medium tracking-[1px] font-oswald text-platinum  ">
+              <li><a href="#hero">home</a></li>
+              <li><a href="#about">about</a></li>
+              <li><a href="#tournament">tournament</a></li>
+              <li><a href="#team">team</a></li>
+              <li><a href="#gears">gears</a></li>
+              <li><a href="#contact">contact</a></li>
+            </ul>
+            <div class="footer-input-wrapper relative max-w-[260px] mx-auto mt-[10px] flex items-center">
+              <input type="text" name="message" placeholder="find here now" required
+                class="bg-xiketic w-full text-white text-fs-10 py-[17px] px-[25px] clip-polygon-6 placeholder:text-fs-9 placeholder:capitalize  focus:outline-none">
+              <button type="submit"
+                class="footer-search-button button primary-button clip-polygon-7 absolute  py-[12px] px-[17px] top-0 right-0"><i
+                  class='bx bx-search'></i></button>
+            </div>
+          </div>
+        </div>
+        <div class="footer-quicklinks ">
+          <ul
+            class="footer-quicklinks-list flex flex-wrap justify-center items-center mb-[20px] gap-[5px] font-oswald text-fs-10 uppercase text-light-gray ">
+            <li><a href="#">faq</a></li>
+            <li><a href="#">help center</a></li>
+            <li><a href="#">terms of use</a></li>
+            <li><a href="#">privacy</a></li>
+          </ul>
+          <ul class="footer-social-list flex flex-wrap justify-center items-center gap-[10px]">
+            <li><a href="#"><i class='bx bxl-discord'></i></a></li>
+            <li><a href="#"><i class='bx bxl-twitch'></i></a></li>
+            <li><a href="#"><i class="fa-brands fa-xbox"></i></a></li>
+            <li><a href="#"><i class='bx bxl-youtube'></i></a></li>
+          </ul>
+        </div>
+
+
+      </div>
+    </div>
+    <div class="footer-bottom py-[25px] text-center bg-xiketic ">
+      <div class="container">
+        <p class="text-light-gray font-oswald font-medium uppercase text-fs-9 mb-[15px]">Copyright &copy; 2024 <a
+            href="#" class="inline-block text-orange">Naglaa Hamdi</a>. all rights reserved</p>
+        <img src="./assets/images/footer-bottom-img.png" class="w-max max-w-full mx-auto"
+          alt="online payment companies logo">
+      </div>
+    </div>
+  </footer>
+
+  <a href="#top"
+    class="go-top button primary-button hidden fixed bottom-[20px] right-[20px] px-[15px] py-[10px] transition duration-[0.15s] ease-in-out clip-polygon-8 hover:bg-white hover:text-orange">
+    <i class='bx bxs-chevron-up'></i>
+  </a>
+
+  <!-- Javascript Link -->
+  <script src="./main.js"></script>
+</body>
+
+</html>
