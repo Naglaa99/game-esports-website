@@ -558,6 +558,18 @@ video {
   width: 100%;
 }
 
+@media (min-width: 420px) {
+  .container {
+    max-width: 420px;
+  }
+}
+
+@media (min-width: 575px) {
+  .container {
+    max-width: 575px;
+  }
+}
+
 @media (min-width: 640px) {
   .container {
     max-width: 640px;
@@ -573,6 +585,12 @@ video {
 @media (min-width: 1024px) {
   .container {
     max-width: 1024px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1200px;
   }
 }
 
@@ -719,10 +737,6 @@ video {
 
 .mt-\[5px\] {
   margin-top: 5px;
-}
-
-.mt-\[90px\] {
-  margin-top: 90px;
 }
 
 .block {
@@ -916,6 +930,11 @@ video {
 
 .gap-y-\[5px\] {
   row-gap: 5px;
+}
+
+.gap-x-\[16px\] {
+  -moz-column-gap: 16px;
+       column-gap: 16px;
 }
 
 .overflow-x-auto {
@@ -1207,6 +1226,10 @@ video {
   padding-top: 60px;
 }
 
+.pt-\[90px\] {
+  padding-top: 90px;
+}
+
 .text-center {
   text-align: center;
 }
@@ -1454,6 +1477,40 @@ video {
   width: 40px;
 }
 
+.header-shape {
+  position: relative;
+}
+
+.header-shape::before, .header-shape::after {
+  content: "";
+  position: absolute;
+  height: 20px;
+  width: 115px;
+  background: hsl(234, 14%, 14%);
+  bottom: -17px;
+}
+
+.header-shape::before {
+  left: 0;
+  clip-path: polygon(0 0, 100% 0%, 82% 100%, 0% 100%);
+}
+
+.header-shape::after {
+  right: 0;
+  clip-path: polygon(0 0, 100% 0%, 100% 100%, 18% 100%);
+}
+
+.newsletter-form::after {
+  content: "";
+  position: absolute;
+  bottom: 9px;
+  left: -3px;
+  height: 1px;
+  width: 27px;
+  background: #ffffff;
+  transform: rotate(43deg);
+}
+
 .section-title {
   position: relative;
 }
@@ -1589,5 +1646,289 @@ video {
 
 .group:hover .group-hover\:opacity-\[0\.5\] {
   opacity: 0.5;
+}
+
+@media (min-width: 420px) {
+  .custom-420\:mx-auto {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .custom-420\:text-\[70px\] {
+    font-size: 70px;
+  }
+}
+
+@media (min-width: 575px) {
+  .custom-575\:absolute {
+    position: absolute;
+  }
+
+  .custom-575\:relative {
+    position: relative;
+  }
+
+  .custom-575\:left-\[160px\] {
+    left: 160px;
+  }
+
+  .custom-575\:top-\[120px\] {
+    top: 120px;
+  }
+
+  .custom-575\:-z-10 {
+    z-index: -10;
+  }
+
+  .custom-575\:z-10 {
+    z-index: 10;
+  }
+
+  .custom-575\:mx-auto {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .custom-575\:block {
+    display: block;
+  }
+
+  .custom-575\:min-w-\[80\%\] {
+    min-width: 80%;
+  }
+
+  .custom-575\:max-w-\[150px\] {
+    max-width: 150px;
+  }
+
+  .custom-575\:max-w-\[410px\] {
+    max-width: 410px;
+  }
+
+  .custom-575\:max-w-\[500px\] {
+    max-width: 500px;
+  }
+
+  .custom-575\:max-w-\[540px\] {
+    max-width: 540px;
+  }
+
+  .custom-575\:max-w-none {
+    max-width: none;
+  }
+
+  .custom-575\:px-\[40px\] {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+
+  .custom-575\:py-\[60px\] {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+
+  .custom-575\:text-\[90px\] {
+    font-size: 90px;
+  }
+}
+
+@media (min-width: 768px) {
+  .custom-768\:absolute {
+    position: absolute;
+  }
+
+  .custom-768\:relative {
+    position: relative;
+  }
+
+  .custom-768\:left-\[-120px\] {
+    left: -120px;
+  }
+
+  .custom-768\:left-\[200px\] {
+    left: 200px;
+  }
+
+  .custom-768\:right-\[-112px\] {
+    right: -112px;
+  }
+
+  .custom-768\:top-0 {
+    top: 0px;
+  }
+
+  .custom-768\:top-\[110px\] {
+    top: 110px;
+  }
+
+  .custom-768\:left-0 {
+    left: 0px;
+  }
+
+  .custom-768\:right-0 {
+    right: 0px;
+  }
+
+  .custom-768\:bottom-0 {
+    bottom: 0px;
+  }
+
+  .custom-768\:-z-10 {
+    z-index: -10;
+  }
+
+  .custom-768\:mx-0 {
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+
+  .custom-768\:mx-auto {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .custom-768\:mb-0 {
+    margin-bottom: 0px;
+  }
+
+  .custom-768\:block {
+    display: block;
+  }
+
+  .custom-768\:flex {
+    display: flex;
+  }
+
+  .custom-768\:w-\[130px\] {
+    width: 130px;
+  }
+
+  .custom-768\:w-\[50\%\] {
+    width: 50%;
+  }
+
+  .custom-768\:min-w-\[70\%\] {
+    min-width: 70%;
+  }
+
+  .custom-768\:max-w-\[430px\] {
+    max-width: 430px;
+  }
+
+  .custom-768\:max-w-\[440px\] {
+    max-width: 440px;
+  }
+
+  .custom-768\:max-w-\[530px\] {
+    max-width: 530px;
+  }
+
+  .custom-768\:max-w-\[700px\] {
+    max-width: 700px;
+  }
+
+  .custom-768\:max-w-\[50\] {
+    max-width: 50;
+  }
+
+  .custom-768\:max-w-\[50\%\] {
+    max-width: 50%;
+  }
+
+  .custom-768\:grid-cols-2 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .custom-768\:items-center {
+    align-items: center;
+  }
+
+  .custom-768\:justify-start {
+    justify-content: flex-start;
+  }
+
+  .custom-768\:justify-center {
+    justify-content: center;
+  }
+
+  .custom-768\:justify-between {
+    justify-content: space-between;
+  }
+
+  .custom-768\:gap-\[30px\] {
+    gap: 30px;
+  }
+
+  .custom-768\:gap-x-0 {
+    -moz-column-gap: 0px;
+         column-gap: 0px;
+  }
+
+  .custom-768\:gap-x-\[16px\] {
+    -moz-column-gap: 16px;
+         column-gap: 16px;
+  }
+
+  .custom-768\:pb-\[30px\] {
+    padding-bottom: 30px;
+  }
+
+  .custom-768\:text-left {
+    text-align: left;
+  }
+
+  .custom-768\:text-\[115px\] {
+    font-size: 115px;
+  }
+
+  .custom-768\:text-\[25px\] {
+    font-size: 25px;
+  }
+
+  .custom-768\:text-\[36px\] {
+    font-size: 36px;
+  }
+
+  .custom-768\:tracking-\[30px\] {
+    letter-spacing: 30px;
+  }
+
+  .custom-768\:header-shape {
+    position: relative;
+  }
+
+  .custom-768\:header-shape::before,.custom-768\:header-shape::after {
+    content: "";
+    position: absolute;
+    height: 20px;
+    width: 115px;
+    background: hsl(234, 14%, 14%);
+    bottom: -17px;
+  }
+
+  .custom-768\:header-shape::before {
+    left: 0;
+    clip-path: polygon(0 0, 100% 0%, 82% 100%, 0% 100%);
+  }
+
+  .custom-768\:header-shape::after {
+    right: 0;
+    clip-path: polygon(0 0, 100% 0%, 100% 100%, 18% 100%);
+  }
+
+  .custom-768\:newsletter-form::after {
+    content: "";
+    position: absolute;
+    bottom: 9px;
+    left: -3px;
+    height: 1px;
+    width: 27px;
+    background: #ffffff;
+    transform: rotate(43deg);
+  }
+
+  .custom-768\:clip-polygon-4 {
+    clip-path: polygon(96% 0, 100% 36%, 100% 100%, 4% 100%, 0 66%, 0 0);
+  }
 }
 

@@ -34,6 +34,7 @@ const applyUiStyle = () => {
       "py-[10px]",
       "px-[25px]",
       "text-fs-8",
+
       "border-b-[1px]",
       "font-medium",
       "transition",
@@ -55,6 +56,9 @@ const applyUiStyle = () => {
       "text-white",
       "font-refault",
       "text-fs-1",
+      "custom-420:text-[70px]",
+      "custom-575:text-[90px]",
+      "custom-768:text-[115px]",
       "font-normal",
       "uppercase"
     );
@@ -93,10 +97,21 @@ const applyUiStyle = () => {
     style.classList.add("bg-orange", "hover:bg-raisin-black-1");
   });
   container.forEach((style) => {
-    style.classList.add("px-[15px]");
+    style.classList.add(
+      "px-[15px]",
+      "custom-420:mx-auto",
+      "custom-575:max-w-[540px]",
+      "custom-575:mx-auto",
+      "custom-768:max-w-[700px]"
+    );
   });
   galleryList.forEach((style) => {
-    style.classList.add("min-w-[95%]", "snap-center");
+    style.classList.add(
+      "min-w-[95%]",
+      "snap-center",
+      "custom-575:min-w-[80%]",
+      "custom-768:min-w-[70%]"
+    );
   });
   teamMemberList.forEach((style) => {
     style.classList.add(

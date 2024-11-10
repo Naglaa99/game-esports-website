@@ -32,7 +32,7 @@
 
   <!-- === Header === -->
   <header
-    class="header fixed left-0 top-0 bg-raisin-black-1 p-[12px] w-full shadow-header z-40 border-b-[1px] border-solid border-custom">
+    class="header custom-768:header-shape fixed left-0 top-0 bg-raisin-black-1 p-[12px] w-full shadow-header z-40 border-b-[1px] border-solid border-custom">
     <div class="overlay fixed inset-0 pointer-events-none z-10 transition duration-[.15s] ease-in"></div>
     <div class="container flex justify-between items-center ">
       <a href="#" class="logo ">
@@ -79,10 +79,11 @@
     <article>
       <!-- === Hero section === -->
       <section
-        class="hero flex justify-center items-center py-[60px]  bg-no-repeat bg-cover bg-center  text-center min-h-screen max-h-[1000px] mt-[90px] bg-[url('../assets/images/hero-banner.jpg')]"
+        class="hero flex justify-center items-center py-[60px]  bg-no-repeat bg-cover bg-center  text-center min-h-screen max-h-[1000px] pt-[90px] bg-[url('../assets/images/hero-banner.jpg')]"
         id="hero">
         <div class="container">
-          <p class="subtitle text-fs-7 font-oswald font-medium  uppercase tracking-[12px] text-shadow-text text-white">
+          <p
+            class="subtitle text-fs-7 custom-768:text-[25px] custom-768:tracking-[30px] font-oswald font-medium  uppercase tracking-[12px] text-shadow-text text-white">
             the season 8</p>
           <h1 class="title">steam</h1>
           <div class="button-group flex flex-wrap justify-center items-center ">
@@ -97,18 +98,23 @@
         </div>
       </section>
 
-      <div class="section-wrapper  bg-[url('../assets/images/section-wrapper-bg.jpg')]  bg-cover bg-center ">
+      <div class="section-wrapper  bg-[url('../assets/images/section-wrapper-bg.jpg')]  bg-cover bg-center  ">
         <section
           class="about bg-[url('../assets/images/about-img-shadow.png')]  bg-cover bg-center  pt-[120px] pb-[60px]"
           id="about">
           <div class="container">
-            <figure class="about-banner mb-[40px]">
+            <figure
+              class="about-banner mb-[40px] custom-575:relative custom-575:max-w-[410px] custom-575:mx-auto custom-575:z-10  custom-768:max-w-[430px]">
               <img src="./assets/images/about-img.png" alt="M shape" class="w-full">
-              <img src="./assets/images/character-1.png" alt="Game character" class="hidden">
-              <img src="./assets/images/character-2.png" alt="Game character" class="hidden">
-              <img src="./assets/images/character-3.png" alt="Game character" class="hidden">
+              <img src="./assets/images/character-1.png" alt="Game character"
+                class="hidden custom-768:block custom-768:absolute custom-768:-z-10  custom-768:w-[130px] custom-768:top-[110px] custom-768:left-[-120px]">
+              <img src="./assets/images/character-2.png" alt="Game character"
+                class=" hidden custom-575:block custom-575:absolute custom-575:top-[120px] custom-575:left-[160px] custom-575:max-w-[150px] custom-575:-z-10 custom-768:left-[200px]">
+              <img src="./assets/images/character-3.png" alt="Game character"
+                class="hidden custom-768:block custom-768:absolute custom-768:-z-10  custom-768:top-0 custom-768:right-[-112px] ">
             </figure>
-            <div class="about-content bg-raisin-black-1 px-[20px] py-[40px] text-white rounded-[4px] shadow-card">
+            <div
+              class="about-content bg-raisin-black-1 px-[20px] py-[40px] custom-575:py-[60px] custom-575:px-[40px] text-white rounded-[4px] shadow-card">
               <p class="text-orange font-oswald  uppercase mb-[15px] text-fs-8 font-medium">Find team member</p>
               <h2 class="mb-[20px] font-semibold">Experience just for gamers <strong class="text-orange">offer</strong>
               </h2>
@@ -131,13 +137,14 @@
             <div class="tournament-content mb-[50px]">
               <p class="font-oswald font-medium mb-[10px] uppercase text-orange">Check out our next</p>
               <h2 class="font-semibold mb-[20px]">Gaming tournaments !</h2>
-              <p class="text-fs-9 text-light-gray mb-[30px] leading-[1.8]">Lpsum dolor sit amet, consectetur adipiscing
+              <p class="text-fs-9 text-light-gray mb-[30px] leading-[1.8] custom-575:max-w-[500px] custom-575:mx-auto">
+                Lpsum dolor sit amet, consectetur adipiscing
                 elit, sed labore et dolore magna aliqua.</p>
               <button class="button primary-button mx-auto ">join with us</button>
             </div>
 
             <div class="tournament-prize">
-              <h2 class="font-semibold mb-[20px] text-fs-3">Prize pool</h2>
+              <h2 class="font-semibold mb-[20px] text-fs-3 custom-768:text-[36px]">Prize pool</h2>
               <data value="80000"
                 class="font-oswald text-fs-4 py-[8px] px-[42px] bg-orange rounded-[50px] ">$80000</data>
               <figure>
@@ -146,7 +153,7 @@
             </div>
 
             <div class="tournament-winners bg-raisin-black-1 rounded-[4px] px-[30px] py-[40px]  shadow-card">
-              <h2 class="font-semibold text-fs-3 mb-[25px]">Last winners</h2>
+              <h2 class="font-semibold text-fs-3 custom-768:text-[36px] mb-[25px]">Last winners</h2>
               <ul class="flex flex-wrap  justify-center items-center gap-[20px]">
                 <li class="max-w-[90px]  mb-[15px]">
                   <figure>
@@ -168,9 +175,9 @@
         </section>
 
         <section class="py-[60px]">
-          <div class="container">
+          <div class="container custom-575:max-w-none">
             <ul
-              class=" gallery-list has-scrollbar scrollbar-thin flex justify-start items-center gap-[15px] m-[-15px] pb-[15px] px-[15px] overflow-x-auto  snap-x snap-mandatory ">
+              class=" gallery-list has-scrollbar  scrollbar-thin flex justify-start items-center gap-[15px] m-[-15px] pb-[15px] px-[15px] overflow-x-auto  snap-x snap-mandatory custom-768:pb-[30px] ">
               <li>
                 <img src="./assets/images/gallery-img-1.jpg" class="w-full rounded-[4px] shadow-card"
                   alt="Gallery image">
@@ -275,7 +282,7 @@
         <section class="gears py-[60px]" id="gears">
           <div class="container">
             <h2 class="font-semibold text-center  section-title mb-[80px]">check our gears</h2>
-            <ul class="gear-list grid gap-[50px]">
+            <ul class="gears-list grid gap-[50px] custom-768:grid-cols-2">
               <li>
                 <div class="gears-card">
                   <div
@@ -386,16 +393,20 @@
         <section class="newsletter pt-[60px] pb-[120px]">
           <div class="container">
             <div
-              class="newsletter-card bg-[url('../assets/images/newsletter-bg.jpg')] bg-cover bg-center bg-no-repeat shadow-card rounded-[10px] py-[50px] px-[25px] text-center ">
-              <div class="newsletter-content pb-[30px] ">
-                <img src="./assets/images/newsletter-img.png" alt="Newsletter Image" class="w-max mx-auto mb-[10px]">
-                <h2 class="font-semibold text-fs-3">Subscribe to our newsletter</h2>
+              class="newsletter-card bg-[url('../assets/images/newsletter-bg.jpg')] bg-cover bg-center bg-no-repeat shadow-card rounded-[10px] py-[50px] px-[25px] text-center custom-768:text-left ">
+              <div
+                class="newsletter-content pb-[30px]  custom-768:flex custom-768:justify-center custom-768:items-center custom-768:gap-[30px] custom-768:max-w-[440px] custom-768:mx-auto">
+                <img src="./assets/images/newsletter-img.png" alt="Newsletter Image"
+                  class="w-max mx-auto mb-[10px] custom-768:mx-0">
+                <h2 class="font-semibold text-fs-3 custom-768:text-[36px]">Subscribe to our newsletter</h2>
               </div>
-              <form action="">
+              <form action=""
+                class="custom-768:relative custom-768:max-w-[530px] custom-768:mx-auto custom-768:newsletter-form">
                 <input type="email"
-                  class="py-[17px] px-[25px] w-full bg-[hsla(0,0%,0%,.2)] mb-[15px] border-[1px] border-white border-solid text-fs-10 text-white focus:bg-[hsla(0,0%,0%,.4)] focus:outline-none placeholder:text-white placeholder:text-fs-9 placeholder:capitalize "
+                  class=" py-[17px] px-[25px] w-full bg-[hsla(0,0%,0%,.2)] mb-[15px] border-[1px] border-white border-solid text-fs-10 text-white focus:bg-[hsla(0,0%,0%,.4)] focus:outline-none placeholder:text-white placeholder:text-fs-9 placeholder:capitalize custom-768:clip-polygon-4 custom-768:mb-0 "
                   name="email" placeholder="your email address" required>
-                <button type="submit" class="button  bg-white  hover:bg-raisin-black-1 group text-fs-7"><span
+                <button type="submit"
+                  class="button  bg-white  hover:bg-raisin-black-1 group text-fs-7 custom-768:absolute custom-768:top-0 custom-768:right-0 custom-768:bottom-0"><span
                     class="text-orange group-hover:text-white">subscribe</span></button>
               </form>
             </div>
@@ -416,9 +427,9 @@
               <img src="./assets/images/logo.svg" alt="GameX logo">
             </a>
           </div>
-          <div class="footer-menu-wrapper">
+          <div class="footer-menu-wrapper custom-768:flex custom-768:justify-between custom-768:items-center">
             <ul
-              class="footer-menu-list flex flex-wrap justify-center items-center mb-[20px] gap-y-[5px] gap-x-[40px] text-fs-8 uppercase font-medium tracking-[1px] font-oswald text-platinum  ">
+              class="footer-menu-list flex flex-wrap justify-center items-center mb-[20px] gap-y-[5px] gap-x-[40px] text-fs-8 uppercase font-medium tracking-[1px] font-oswald text-platinum  custom-768:max-w-[50%] custom-768:justify-start custom-768:gap-x-[16px] custom-768:mb-0">
               <li><a href="#hero">home</a></li>
               <li><a href="#about">about</a></li>
               <li><a href="#tournament">tournament</a></li>
@@ -426,7 +437,8 @@
               <li><a href="#gears">gears</a></li>
               <li><a href="#contact">contact</a></li>
             </ul>
-            <div class="footer-input-wrapper relative max-w-[260px] mx-auto mt-[10px] flex items-center">
+            <div
+              class="footer-input-wrapper relative max-w-[260px] mx-auto mt-[10px] flex items-center custom-768:mx-0 custom-768:w-[50%]">
               <input type="text" name="message" placeholder="find here now" required
                 class="bg-xiketic w-full text-white text-fs-10 py-[17px] px-[25px] clip-polygon-6 placeholder:text-fs-9 placeholder:capitalize  focus:outline-none">
               <button type="submit"
@@ -435,9 +447,9 @@
             </div>
           </div>
         </div>
-        <div class="footer-quicklinks ">
+        <div class="footer-quicklinks custom-768:flex custom-768:justify-between custom-768:items-center">
           <ul
-            class="footer-quicklinks-list flex flex-wrap justify-center items-center mb-[20px] gap-[5px] font-oswald text-fs-10 uppercase text-light-gray ">
+            class="footer-quicklinks-list flex flex-wrap justify-center items-center mb-[20px] gap-[5px] font-oswald text-fs-10 uppercase text-light-gray custom-768:mb-0 custom-768:gap-x-0">
             <li><a href="#">faq</a></li>
             <li><a href="#">help center</a></li>
             <li><a href="#">terms of use</a></li>
@@ -455,9 +467,9 @@
       </div>
     </div>
     <div class="footer-bottom py-[25px] text-center bg-xiketic ">
-      <div class="container">
-        <p class="text-light-gray font-oswald font-medium uppercase text-fs-9 mb-[15px]">Copyright &copy; 2024 <a
-            href="#" class="inline-block text-orange">Naglaa Hamdi</a>. all rights reserved</p>
+      <div class="container custom-768:flex custom-768:justify-between custom-768:items-center">
+        <p class="text-light-gray font-oswald font-medium uppercase text-fs-9 mb-[15px] custom-768:mb-0">Copyright
+          &copy; 2024 <a href="#" class="inline-block text-orange">Naglaa Hamdi</a>. all rights reserved</p>
         <img src="./assets/images/footer-bottom-img.png" class="w-max max-w-full mx-auto"
           alt="online payment companies logo">
       </div>

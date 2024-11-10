@@ -7,6 +7,13 @@ module.exports = {
   content: ["./**/*.{html,js}"],
   theme: {
     extend: {
+      screens: {
+        "custom-420": "420px",
+        "custom-575": "575px",
+        "custom-768": "768px",
+        "custom-1024": "1024px",
+        "custom-1200": "1200px",
+      },
       boxShadow: {
         header: "0 3px 27px hsla(0, 0%, 0%, 0.5)",
         navbar: "0px 2px 8px hsla(0, 0%, 0%, 0.5)",
@@ -83,13 +90,43 @@ module.exports = {
             borderRadius: "10px",
           },
         },
-
         ".has-scrollbar": {
           "&::-webkit-scrollbar": {
             height: "6px",
           },
           "&::-webkit-scrollbar-button": {
             width: "40px",
+          },
+        },
+        ".header-shape": {
+          position: "relative",
+          "&::before, &::after": {
+            content: '""',
+            position: "absolute",
+            height: "20px",
+            width: "115px",
+            background: "hsl(234, 14%, 14%)",
+            bottom: "-17px",
+          },
+          "&::before": {
+            left: "0",
+            clipPath: "polygon(0 0, 100% 0%, 82% 100%, 0% 100%)",
+          },
+          "&::after": {
+            right: "0",
+            clipPath: "polygon(0 0, 100% 0%, 100% 100%, 18% 100%)",
+          },
+        },
+        ".newsletter-form": {
+          "&::after": {
+            content: '""',
+            position: "absolute",
+            bottom: "9px",
+            left: "-3px",
+            height: "1px",
+            width: "27px",
+            background: "#ffffff",
+            transform: "rotate(43deg)",
           },
         },
         ".section-title": {
