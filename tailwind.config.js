@@ -18,6 +18,7 @@ module.exports = {
         header: "0 3px 27px hsla(0, 0%, 0%, 0.5)",
         navbar: "0px 2px 8px hsla(0, 0%, 0%, 0.5)",
         card: "0px 2px 4px hsla(0,0%,0%,0.2)",
+        icon: "0 3px 7px hsla(345, 75%, 30%, 0.2), inset 0 3px 7px 0 hsla(335, 53%, 14%, 0.4)",
       },
       textShadow: {
         text: "0px 7px hsla(0, 0%, 0%, 0.4)",
@@ -45,6 +46,9 @@ module.exports = {
       },
       aspectRatio: {
         "2/1.7": "2 / 1.7",
+      },
+      maxWidth: {
+        unset: "unset",
       },
       colors: {
         "raisin-black-1": "hsl(234, 14%, 14%)",
@@ -77,6 +81,79 @@ module.exports = {
           fontWeight: "normal",
           textRendering: "optimizeLegibility",
         },
+        ".custom-1024-navbar": {
+          position: "static",
+          opacity: "1",
+          visibility: "visible",
+          background: "none",
+          maxWidth: "unset",
+          width: "max-content",
+          height: "auto",
+          boxShadow: "none",
+          display: "flex",
+          justifyContent: "space-between",
+          alignItems: "center",
+        },
+        ".navbar-link": {
+          position: "relative",
+          color: "hsl(0, 4%, 91%)",
+          paddingBlock: "34px",
+          border: "none",
+          fontFamily: "Oswald",
+          textTransform: "uppercase",
+          letterSpacing: "1px",
+          zIndex: "1",
+          "&::after": {
+            content: "''",
+            position: "absolute",
+            inset: "0",
+            transform: "skew(-15deg)",
+            borderBottom: "5px solid transparent",
+            zIndex: "-1",
+            transition: "all 0.15s ease-in-out",
+          },
+          "&:is(:hover, :focus)::after": {
+            background: "hsl(231, 12%, 12%)",
+            borderColor: "hsl(31, 100%, 51%)",
+          },
+        },
+
+        ".button-sign-in": {
+          position: "relative",
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+          background: "hsl(228, 12%, 17%)",
+          color: "hsl(0, 0%, 80%)",
+          fontFamily: "Oswald",
+          fontSize: "12px",
+          fontWeight: "500",
+          textTransform: "uppercase",
+          letterSpacing: "1px",
+          padding: "4px",
+          borderRight: "5px solid hsl(31, 100%, 51%)",
+          boxShadow: "0 0 4px hsla(0, 0%, 0%, 0.2)",
+          marginLeft: "15px",
+          "&::after": {
+            content: '""',
+            position: "absolute",
+            top: "50%",
+            left: "-20px",
+            transform: "translateY(-50%)",
+            width: "5px",
+            height: "40px",
+            backgroundColor: "hsl(240, 11%, 9%)",
+            boxShadow:
+              "0 3px 7px hsla(345, 75%, 30%, 0.2), inset 0 3px 7px 0 hsla(335, 53%, 14%, 0.4)",
+          },
+          "&:is(:hover, :focus)": {
+            color: "hsl(31, 100%, 51%)",
+            transition: "0.3s ease-in-out",
+          },
+          "&:hover .icon": {
+            color: "hsl(31, 100%, 51%)",
+          },
+        },
 
         ".scrollbar-thin": {
           "&::-webkit-scrollbar": {
@@ -98,8 +175,17 @@ module.exports = {
             width: "40px",
           },
         },
+        ".custom-768-scrollbar": {
+          "&::-webkit-scrollbar-button": {
+            width: "150px",
+          },
+        },
+        ".custom-1024-scrollbar": {
+          "&::-webkit-scrollbar-button": {
+            width: "200px",
+          },
+        },
         ".header-shape": {
-          position: "relative",
           "&::before, &::after": {
             content: '""',
             position: "absolute",
@@ -129,6 +215,22 @@ module.exports = {
             transform: "rotate(43deg)",
           },
         },
+
+        ".custom-1024-newsletter-form": {
+          "&::after": {
+            bottom: "9px",
+            left: "-5px",
+            width: "25px",
+            transform: "rotate(52deg)",
+          },
+        },
+        ".custom-1200-newsletter-form": {
+          "&::after": {
+            left: "-3px",
+            transform: "rotate(46deg)",
+          },
+        },
+
         ".section-title": {
           position: "relative",
           "&::before, &::after": {
@@ -158,6 +260,10 @@ module.exports = {
             width: "100%",
             background: "hsla(0, 0%,50%,0.2)",
           },
+        },
+        ".about-background": {
+          backgroundSize: "55%",
+          backgroundPosition: "90% center",
         },
         // Polygon clip-path utilities
         ".clip-polygon-1": {

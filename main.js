@@ -1,4 +1,5 @@
 const navbarLinks = document.querySelectorAll(".nav-link");
+const header = document.getElementById("header");
 const navSocialList = document.querySelectorAll(".nav-social-list li a");
 const openMenuIcon = document.querySelector(".open-menu i");
 const closeMenuIcon = document.querySelector(".close-menu i");
@@ -6,6 +7,7 @@ const navbar = document.querySelector("nav");
 const overlay = document.querySelector(".overlay");
 const h1 = document.querySelectorAll("h1");
 const headers = document.querySelectorAll("h2,h3");
+const h2 = document.querySelectorAll("h2");
 const container = document.querySelectorAll(".container");
 const button = document.querySelectorAll(".button");
 const primaryButton = document.querySelectorAll(".primary-button");
@@ -44,11 +46,13 @@ const applyUiStyle = () => {
       "border-solid",
       "capitalize",
       "cursor-pointer",
-      "hover:text-orange"
+      "hover:text-orange",
+      "custom-1024:navbar-link",
+      "custom-1200:py-[45px]"
     );
-    item.addEventListener("click", () => {
-      navbar.classList.add("hidden");
-    });
+    // item.addEventListener("click", () => {
+    //   navbar.classList.add("hidden");
+    // });
   });
 
   h1.forEach((style) => {
@@ -59,6 +63,7 @@ const applyUiStyle = () => {
       "custom-420:text-[70px]",
       "custom-575:text-[90px]",
       "custom-768:text-[115px]",
+      "custom-1200:text-[150px]",
       "font-normal",
       "uppercase"
     );
@@ -71,6 +76,10 @@ const applyUiStyle = () => {
       "leading-[1.2]",
       "uppercase"
     );
+  });
+
+  h2.forEach((style) => {
+    style.classList.add("custom-768:text-[45px]");
   });
   button.forEach((style) => {
     style.classList.add(
@@ -100,9 +109,11 @@ const applyUiStyle = () => {
     style.classList.add(
       "px-[15px]",
       "custom-420:mx-auto",
-      "custom-575:max-w-[540px]",
+      "custom-575:max-w-[550px]",
       "custom-575:mx-auto",
-      "custom-768:max-w-[700px]"
+      "custom-768:max-w-[720px]",
+      "custom-1024:max-w-[1000px]",
+      "custom-1200:max-w-[1200px]"
     );
   });
   galleryList.forEach((style) => {
@@ -110,7 +121,9 @@ const applyUiStyle = () => {
       "min-w-[95%]",
       "snap-center",
       "custom-575:min-w-[80%]",
-      "custom-768:min-w-[70%]"
+      "custom-768:min-w-[70%]",
+      "custom-1024:min-w-[60%]",
+      "custom-1200:min-w-[50%]"
     );
   });
   teamMemberList.forEach((style) => {
@@ -235,4 +248,5 @@ goTopButton.addEventListener("click", (element) => {
     behavior: "smooth",
   });
 });
+
 applyUiStyle();
