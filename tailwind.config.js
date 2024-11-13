@@ -7,22 +7,30 @@ module.exports = {
   content: ["./**/*.{html,js}"],
   theme: {
     extend: {
+      // Define custom screen breakpoints
       screens: {
+        "custom-300": { max: "300px" },
         "custom-420": "420px",
         "custom-575": "575px",
         "custom-768": "768px",
         "custom-1024": "1024px",
         "custom-1200": "1200px",
       },
+
+      //Add custom box shadow styles
       boxShadow: {
         header: "0 3px 27px hsla(0, 0%, 0%, 0.5)",
         navbar: "0px 2px 8px hsla(0, 0%, 0%, 0.5)",
         card: "0px 2px 4px hsla(0,0%,0%,0.2)",
         icon: "0 3px 7px hsla(345, 75%, 30%, 0.2), inset 0 3px 7px 0 hsla(335, 53%, 14%, 0.4)",
       },
+
+      //Define text shadow using the imported plugin
       textShadow: {
         text: "0px 7px hsla(0, 0%, 0%, 0.4)",
       },
+
+      //Add custom font sizes
       fontSize: {
         "fs-1": "54px",
         "fs-2": "34px",
@@ -36,20 +44,27 @@ module.exports = {
         "fs-10": "13px",
         "fs-11": "12px",
       },
+
       backgroundImage: {
         "hero-banner": "url('./assets/images/hero-banner.jpg')",
       },
+
+      //Define custom fonts
       fontFamily: {
         refault: ["Refault"],
         oswald: ["Oswald", "sans-serif"],
         poppins: ["Poppins", "sans-serif"],
       },
+
+      //Custom aspect ratio
       aspectRatio: {
         "2/1.7": "2 / 1.7",
       },
+
       maxWidth: {
         unset: "unset",
       },
+
       colors: {
         "raisin-black-1": "hsl(234, 14%, 14%)",
         "raisin-black-2": "hsl(231, 12%, 12%)",
@@ -63,23 +78,35 @@ module.exports = {
         custom: "hsla(0, 0%, 100%, .1)",
         overlay: "hsla(0, 0%, 0%, 0.7)",
       },
-      transition: {
-        "transition-1": "0.15s ease-in-out",
-        "transition-2": "0.15s ease-in",
-        "transition-3": "0.25s ease-out",
-      },
     },
   },
   plugins: [
     textShadow,
     plugin(function ({ addUtilities }) {
       addUtilities({
+        //Define custom font face for "Refault" font
         "@font-face": {
           fontFamily: "Refault",
           src: `url('../assets/fonts/REFAULT.woff') format('woff');`,
           fontStyle: "italic",
           fontWeight: "normal",
           textRendering: "optimizeLegibility",
+        },
+
+        "body.active": {
+          overflowY: "hidden",
+        },
+
+        //Utilities for navbar active state and overlay active styles
+        ".navbar.active": {
+          right: "0",
+          visibility: "visible",
+          transition: "all 0.25s ease-out",
+        },
+        ".overlay.active": {
+          background: "hsla(0, 0%, 0%, 0.7)",
+          pointerEvents: "all",
+          transition: "all 0.25s ease-out",
         },
         ".custom-1024-navbar": {
           position: "static",
@@ -94,6 +121,8 @@ module.exports = {
           justifyContent: "space-between",
           alignItems: "center",
         },
+
+        //Responsive navbar styles for larger screens
         ".navbar-link": {
           position: "relative",
           color: "hsl(0, 4%, 91%)",
@@ -155,6 +184,7 @@ module.exports = {
           },
         },
 
+        //Utility for customizing scrollbar width and colors
         ".scrollbar-thin": {
           "&::-webkit-scrollbar": {
             width: "8px",
@@ -185,6 +215,7 @@ module.exports = {
             width: "200px",
           },
         },
+
         ".header-shape": {
           "&::before, &::after": {
             content: '""',
@@ -203,6 +234,7 @@ module.exports = {
             clipPath: "polygon(0 0, 100% 0%, 100% 100%, 18% 100%)",
           },
         },
+
         ".newsletter-form": {
           "&::after": {
             content: '""',
@@ -224,6 +256,7 @@ module.exports = {
             transform: "rotate(52deg)",
           },
         },
+
         ".custom-1200-newsletter-form": {
           "&::after": {
             left: "-3px",
@@ -250,6 +283,7 @@ module.exports = {
             width: "30px",
           },
         },
+
         ".footer-brand-wrapper": {
           "&::after": {
             content: '""',
@@ -261,19 +295,15 @@ module.exports = {
             background: "hsla(0, 0%,50%,0.2)",
           },
         },
+
         ".about-background": {
           backgroundSize: "55%",
           backgroundPosition: "90% center",
         },
+
         // Polygon clip-path utilities
         ".clip-polygon-1": {
           clipPath: "polygon(90% 0, 100% 34%, 100% 100%, 10% 100%, 0 66%, 0 0)",
-        },
-        ".clip-polygon-2": {
-          clipPath: "polygon(0 0, 100% 0%, 82% 100%, 0% 100%)",
-        },
-        ".clip-polygon-3": {
-          clipPath: "polygon(0 0, 100% 0%, 100% 100%, 18% 100%)",
         },
         ".clip-polygon-4": {
           clipPath: "polygon(96% 0, 100% 36%, 100% 100%, 4% 100%, 0 66%, 0 0)",

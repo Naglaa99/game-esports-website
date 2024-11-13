@@ -1,42 +1,51 @@
-const navbarLinks = document.querySelectorAll(".nav-link");
-const header = document.getElementById("header");
-const navSocialList = document.querySelectorAll(".nav-social-list li a");
-const openMenuIcon = document.querySelector(".open-menu i");
-const closeMenuIcon = document.querySelector(".close-menu i");
-const navbar = document.querySelector("nav");
-const overlay = document.querySelector(".overlay");
-const h1 = document.querySelectorAll("h1");
-const headers = document.querySelectorAll("h2,h3");
-const h2 = document.querySelectorAll("h2");
-const container = document.querySelectorAll(".container");
-const button = document.querySelectorAll(".button");
-const primaryButton = document.querySelectorAll(".primary-button");
-const galleryList = document.querySelectorAll(".gallery-list li");
-const teamMemberList = document.querySelectorAll(".team-member-list li");
-const teamMember = document.querySelectorAll(".team-member-list li a");
-const teamMemberImage = document.querySelectorAll(".team-member-list a img");
-const materialSymbolsOutlined = document.querySelectorAll(
-  ".material-symbols-outlined"
-);
-const cardButton = document.querySelectorAll(".card-button");
-const footerMenuLink = document.querySelectorAll(".footer-menu-list li");
-const searchButton = document.querySelector(".footer-search-button");
-const footerQuickLinksList = document.querySelectorAll(
-  ".footer-quicklinks-list li"
-);
-const footerSocialItem = document.querySelectorAll(".footer-social-list li");
-const goTopButton = document.querySelector(".go-top");
-const applyUiStyle = () => {
-  navSocialList.forEach((item) => {
+const elements = {
+  navbarLinks: document.querySelectorAll(".nav-link"),
+  header: document.getElementById("header"),
+  navSocialLink: document.querySelectorAll(".nav-social-list li a"),
+  openMenuIcon: document.querySelector(".open-menu i"),
+  closeMenuIcon: document.querySelector(".close-menu i"),
+  navbar: document.querySelector("nav"),
+  overlay: document.querySelector(".overlay"),
+  h1: document.querySelectorAll("h1"),
+  headers: document.querySelectorAll("h2,h3"),
+  h2: document.querySelectorAll("h2"),
+  container: document.querySelectorAll(".container"),
+  button: document.querySelectorAll(".button"),
+  primaryButton: document.querySelectorAll(".primary-button"),
+  galleryItems: document.querySelectorAll(".gallery-list li"),
+  galleryImage: document.querySelectorAll(".gallery-list li img"),
+  teamMemberItems: document.querySelectorAll(".team-member-list li"),
+  teamMember: document.querySelectorAll(".team-member-list li a"),
+  teamMemberImage: document.querySelectorAll(".team-member-list a img"),
+  materialSymbolsOutlined: document.querySelectorAll(
+    ".material-symbols-outlined"
+  ),
+  cardButton: document.querySelectorAll(".card-button"),
+  footerMenuLink: document.querySelectorAll(".footer-menu-list li"),
+  searchButton: document.querySelector(".footer-search-button"),
+  footerQuickLinksItems: document.querySelectorAll(
+    ".footer-quicklinks-list li"
+  ),
+  footerSocialItem: document.querySelectorAll(".footer-social-list li"),
+  gearItems: document.querySelectorAll(".gears-list li"),
+  goTopButton: document.querySelector(".go-top"),
+};
+
+/**
+ * Adds header styles to elements in the header section.
+ */
+
+const applyHeaderStyles = () => {
+  elements.navSocialLink.forEach((item) => {
     item.classList.add("text-orange", "text-[20px]");
   });
-  navbarLinks.forEach((item) => {
+
+  elements.navbarLinks.forEach((item) => {
     item.classList.add(
       "text-white",
       "py-[10px]",
       "px-[25px]",
       "text-fs-8",
-
       "border-b-[1px]",
       "font-medium",
       "transition",
@@ -50,17 +59,21 @@ const applyUiStyle = () => {
       "custom-1024:navbar-link",
       "custom-1200:py-[45px]"
     );
-    // item.addEventListener("click", () => {
-    //   navbar.classList.add("hidden");
-    // });
   });
+};
 
-  h1.forEach((style) => {
+/**
+ * Adds heading styles to all headings.
+ */
+
+const applyHeadingStyles = () => {
+  elements.h1.forEach((style) => {
     style.classList.add(
       "text-white",
       "font-refault",
       "text-fs-1",
       "custom-420:text-[70px]",
+      "custom-300:text-[40px]",
       "custom-575:text-[90px]",
       "custom-768:text-[115px]",
       "custom-1200:text-[150px]",
@@ -68,7 +81,8 @@ const applyUiStyle = () => {
       "uppercase"
     );
   });
-  headers.forEach((style) => {
+
+  elements.headers.forEach((style) => {
     style.classList.add(
       "text-white",
       "font-oswald",
@@ -78,14 +92,24 @@ const applyUiStyle = () => {
     );
   });
 
-  h2.forEach((style) => {
+  elements.h2.forEach((style) => {
     style.classList.add("custom-768:text-[45px]");
   });
-  button.forEach((style) => {
+};
+
+/**
+ * Applies styles to various button elements.
+ * @function
+ * @returns {void}
+ */
+
+const applyButtonStyles = () => {
+  elements.button.forEach((style) => {
     style.classList.add(
       "text-white",
       "font-oswald",
       "text-fs-6",
+      "custom-300:text-fs-9",
       "tracking-[1px]",
       "uppercase",
       "font-medium",
@@ -98,25 +122,38 @@ const applyUiStyle = () => {
       "cursor-pointer"
     );
   });
-  cardButton.forEach((style) => {
+
+  elements.cardButton.forEach((style) => {
     style.classList.replace("py-[14px]", "py-[15px]");
     style.classList.replace("px-[35px]", "px-[20px]");
   });
-  primaryButton.forEach((style) => {
+
+  elements.primaryButton.forEach((style) => {
     style.classList.add("bg-orange", "hover:bg-raisin-black-1");
   });
-  container.forEach((style) => {
+
+  elements.searchButton.classList.remove("py-[14px]", "px-[35px]");
+};
+
+/**
+ * Applies styles to section elements such as containers and galleries.
+ * @function
+ * @returns {void}
+ */
+const applySectionStyles = () => {
+  elements.container.forEach((style) => {
     style.classList.add(
       "px-[15px]",
-      "custom-420:mx-auto",
-      "custom-575:max-w-[550px]",
+      "custom-420:max-w-full",
+      "custom-575:max-w-[540px]",
       "custom-575:mx-auto",
       "custom-768:max-w-[720px]",
       "custom-1024:max-w-[1000px]",
       "custom-1200:max-w-[1200px]"
     );
   });
-  galleryList.forEach((style) => {
+
+  elements.galleryItems.forEach((style) => {
     style.classList.add(
       "min-w-[95%]",
       "snap-center",
@@ -126,7 +163,12 @@ const applyUiStyle = () => {
       "custom-1200:min-w-[50%]"
     );
   });
-  teamMemberList.forEach((style) => {
+
+  elements.galleryImage.forEach((style) => {
+    style.classList.add("w-full", "rounded-[4px]", "shadow-card");
+  });
+
+  elements.teamMemberItems.forEach((style) => {
     style.classList.add(
       "group",
       "max-w-[40%]",
@@ -135,7 +177,8 @@ const applyUiStyle = () => {
       "duration-[0.15s]"
     );
   });
-  teamMember.forEach((style) => {
+
+  elements.teamMember.forEach((style) => {
     style.classList.add(
       "relative",
       "block",
@@ -145,10 +188,12 @@ const applyUiStyle = () => {
       "hover:border-orange"
     );
   });
-  teamMemberImage.forEach((style) => {
+
+  elements.teamMemberImage.forEach((style) => {
     style.classList.add("w-full", "group-hover:opacity-[0.5]");
   });
-  materialSymbolsOutlined.forEach((style) => {
+
+  elements.materialSymbolsOutlined.forEach((style) => {
     style.classList.add(
       "absolute",
       "top-[50%]",
@@ -164,7 +209,16 @@ const applyUiStyle = () => {
       "duration-[0.15s]"
     );
   });
-  footerMenuLink.forEach((style) => {
+};
+
+/**
+ * Applies styles to footer
+ * @function
+ * @returns {void}
+ */
+
+const applyFooterStyles = () => {
+  elements.footerMenuLink.forEach((style) => {
     style.classList.add(
       "px-[10px]",
       "py-[5px]",
@@ -174,7 +228,8 @@ const applyUiStyle = () => {
       "duration-[0.15s]"
     );
   });
-  footerQuickLinksList.forEach((style) => {
+
+  elements.footerQuickLinksItems.forEach((style) => {
     style.classList.add(
       "py-[5px]",
       "px-[10px]",
@@ -185,7 +240,8 @@ const applyUiStyle = () => {
       "hover:text-orange"
     );
   });
-  footerSocialItem.forEach((style) => {
+
+  elements.footerSocialItem.forEach((style) => {
     style.classList.add(
       "bg-xiketic",
       "text-light-gray",
@@ -201,47 +257,150 @@ const applyUiStyle = () => {
       "duration-[0.15s]"
     );
   });
-
-  searchButton.classList.remove("py-[14px]", "px-[35px]");
-  goTopButton.classList.remove("py-[14px]", "px-[35px]");
+  elements.goTopButton.classList.remove("py-[14px]", "px-[35px]");
 };
 
-openMenuIcon.addEventListener("click", () => {
-  navbar.classList.remove("hidden");
-  navbar.classList.add("right-0", "transition", "ease-out", "duration-[0.25s]");
-  overlay.classList.add(
-    "pointer-events-auto",
-    "bg-overlay",
-    "transition",
-    "ease-out",
-    "duration-[0.25s]"
-  );
-});
+/**
+ * Applies styles to elements within the gear section, including card banners,
+ * share buttons, time wrappers, content areas, titles, subtitles, and prices.
+ * This function iterates through each `gearItem` and applies the appropriate
+ * Tailwind CSS classes to achieve consistent styling across the section.
+ *
+ * @function
+ * @returns {void}
+ */
 
-const navElementArray = [closeMenuIcon, overlay];
+const applyGearSectionStyle = () => {
+  elements.gearItems.forEach((item) => {
+    const cardBanner = item.querySelector(".card-banner");
+    cardBanner.classList.add(
+      "relative",
+      "bg-[url('../assets/images/gears-card-bg.png')]",
+      "bg-contain",
+      "bg-center",
+      "w-full",
+      "bg-no-repeat",
+      "aspect-2/1.7",
+      "grid",
+      "place-items-center",
+      "mb-[30px]"
+    );
+
+    const shareButton = item.querySelector(".share");
+    shareButton.classList.add(
+      "text-orange",
+      "absolute",
+      "top-[25%]",
+      "right-[8%]",
+      "text-[20px]",
+      "border-onyx",
+      "border-[2px]",
+      "border-solid",
+      "w-[45px]",
+      "h-[45px]",
+      "rounded-[50%]",
+      "grid",
+      "place-items-center",
+      "transition",
+      "ease-in-out",
+      "duration-[0.15s]",
+      "hover:border-orange"
+    );
+
+    const cardTimeWrapper = item.querySelector(".card-time-wrapper");
+    cardTimeWrapper.classList.add(
+      "text-orange",
+      "absolute",
+      "top-[2%]",
+      "right-[5%]",
+      "custom-1024:top-[4%]",
+      "custom-1024:right-[8%]",
+      "custom-1200:top-[3.5%]",
+      "custom-1200:right-[7%]",
+      "font-oswald",
+      "text-fs-9",
+      "font-medium",
+      "uppercase",
+      "flex",
+      "justify-center",
+      "items-center",
+      "gap-[5px]"
+    );
+
+    const cardContent = item.querySelector(".card-content");
+    cardContent.classList.add(
+      "text-white",
+      "flex",
+      "justify-between",
+      "items-center",
+      "uppercase",
+      "mb-[25px]"
+    );
+
+    const cardTitleWrapper = item.querySelector(".card-title-wrapper");
+
+    const cardTitle = cardTitleWrapper.querySelector("h3");
+    cardTitle.classList.add("font-oswald", "text-fs-5", "font-medium");
+
+    const subtitle = cardTitleWrapper.querySelector("p");
+    subtitle.classList.add("mt-[5px]", "text-light-gray", "text-fs-8");
+
+    const cardPrice = item.querySelector(".card-price");
+    cardPrice.classList.add("font-oswald", "font-medium", "text-fs-5");
+  });
+};
+
+/**
+ * Toggles the "active" class on a given HTML element.
+ *
+ * @param {HTMLElement} element - The element to toggle the "active" class on.
+ */
+
+const elementToggle = (element) => element.classList.toggle("active");
+
+/**
+ * Array of navigation-related elements, including icons, overlay, and navbar links.
+ * These elements trigger toggle functionality for menu visibility.
+ *
+ * @type {HTMLElement[]}
+ */
+const navElementArray = [
+  elements.openMenuIcon,
+  elements.closeMenuIcon,
+  elements.overlay,
+  ...elements.navbarLinks,
+];
+
+/**
+ * Adds click event listeners to each element in `navElementArray` to toggle
+ * the visibility of the navbar, overlay, and body scroll lock.
+ */
 navElementArray.forEach((element) => {
   element.addEventListener("click", () => {
-    navbar.classList.add("hidden");
-    overlay.classList.remove(
-      "pointer-events-auto",
-      "bg-overlay",
-      "transition",
-      "ease-out",
-      "duration-[0.25s]"
-    );
+    elementToggle(elements.navbar);
+    elementToggle(elements.overlay);
+    elementToggle(document.body);
   });
 });
 
+/**
+ * Shows or hides the "go to top" button based on the user's scroll position.
+ * The button becomes visible when scrolling down past 800px.
+ */
 window.addEventListener("scroll", () => {
   if (window.scrollY >= 800) {
-    // Show the button when scrolled 200px down
-    goTopButton.classList.remove("hidden");
+    elements.goTopButton.classList.remove("hidden");
   } else {
-    // Hide the button when near the top
-    goTopButton.classList.add("hidden");
+    elements.goTopButton.classList.add("hidden");
   }
 });
-goTopButton.addEventListener("click", (element) => {
+
+/**
+ * Scrolls the page smoothly to the top when the "go to top" button is clicked.
+ *
+ * @param {Event} element - The click event for the "go to top" button.
+ */
+elements.goTopButton.addEventListener("click", (element) => {
   element.preventDefault();
   window.scrollTo({
     top: 0,
@@ -249,4 +408,9 @@ goTopButton.addEventListener("click", (element) => {
   });
 });
 
-applyUiStyle();
+applyHeaderStyles();
+applyHeadingStyles();
+applyButtonStyles();
+applySectionStyles();
+applyFooterStyles();
+applyGearSectionStyle();
