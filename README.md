@@ -27,4 +27,4 @@ GameX is a dynamic, visually engaging platform designed for gamers to access the
 
 ## Live Demo
 
-[]
+[https://naglaa99.github.io/game-esports-website/]
